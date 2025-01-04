@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <title>Fashion House Việt</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="balo.css">
+    </head>
+
+<body>
+    <section class=" top-txt ">
+        <div class="head container ">
+            <div class="head-txt ">
+                <p>Free shipping, 30-day return or refund guarantee.</p>
+            </div>
+            <div class="sing_in_up ">
+                <a href="# ">SIGN IN</a>
+                <a href="# ">SIGN UP</a>
+            </div>
+        </div>
+    </section>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <input type="checkbox" name="" id="checkbox">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <a href="../TrangChu.html">Home</a>
+            </ul>
+            <div class="logo">
+                <img src="https://i.postimg.cc/TP6JjSTt/logo.webp" alt="">
+            </div>
+        </div>
+    </nav>
+    <section class="filter-section">
+        <div class="filter-container">
+            <h2>Bộ lọc</h2>
+            <div class="category">
+                <h3>Danh mục sản phẩm</h3>
+                <ul>
+                    <li>Sản phẩm mới</li>
+                    <li>Sale</li>
+                    <li>Balo Nam</li>
+                    <li>Balo Nữ</li>
+                    <li>Bộ sưu tập</li>
+                    <li>Hệ thống cửa hàng</li>
+                </ul>
+            </div>
+
+            <div class="price-range">
+                <h3>Khoảng giá</h3>
+                <input type="range" min="0" max="3000000" value="1500000" id="priceSlider">
+                <p><span id="minPrice">0</span>đ - <span id="maxPrice">3,000,000</span>đ</p>
+            </div>
+            <div class="size">
+                <h3>Size Kính Mắt</h3>
+                <div class="size-options">
+                    <span>Balo thời trang (Fashion backpack)</span>
+                    <span>Balo du lịch (Travel backpack)</span>
+                    <span>Balo thể thao (Sport backpack)</span>
+                    <span>Balo học sinh (School backpack)</span>
+                    <span>Balo leo núi (Hiking backpack)</span>
+                    <span>Balo chống trộm (Anti-theft backpack)</span>
+                </div>
+            </div>
+            <div class="video-container">
+                <video controls>
+                    <source src="Baloo.mp4" type="video/mp4">
+                    Trình duyệt của bạn không hỗ trợ video định dạng .webm.
+                </video>
+            </div>
+        </div>
+
+        <div class="product-section">
+            <div class="product-grid">
+                <!-- Sản phẩm mẫu -->
+                <div class="product-item">
+                    <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/4ae1f75830b742699bdaae3e012a5776_9366/Ba_Lo_Badge_of_Sport_Classic_DJen_HG0349_05_hover_standard.jpg"
+                        alt="Pants 1">
+                    <p>Ba Lô Badge of Sport Classic (Hết Hàng)</p>
+                    <p>650.000₫</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <script>
+        const products = [
+            {
+                img: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/32b824b0a1ce401388e742cb4454fbb2_9366/Tui_Festival_Classic_Adicolor_DJen_IJ0765_05_hover_standard.jpg",
+                name: "Túi Festival Classic Adicolor",
+                price: "600.000₫"
+            },
+            {
+                img: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/b6d2b683a6d24fda8888faf5cf14a19d_9366/Tui_Festival_Classic_Adicolor_trang_JN4949_05_hover_standard.jpg",
+                name: "Túi Festival Classic",
+                price: "600.000₫"
+            },
+            {
+                img: "https://mediaelly.sgp1.digitaloceanspaces.com/uploads/2023/07/30131856/balo-nu-thoi-trang-elly-ebh649.jpg",
+                name: "Balo nữ thời trang ELLY EBH64",
+                price: "749.500₫"
+            },
+            {
+                img: "https://mediaelly.sgp1.digitaloceanspaces.com/uploads/2018/06/22102352/balo-nu-thoi-trang-cao-cap-elly-ebh13-5-2.jpg",
+                name: "Balo nữ thời trang ELLY EBH13",
+                price: "749.500₫"
+            },
+            {
+                img: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/dd8391d835944d71a56a91e43c95b8e6_9366/MONOGRAM_BP_DJen_JD5364_05_hover_standard.jpg",
+                name: "MONOGRAM BP",
+                price: "1.000.000₫"
+            },
+            {
+                img: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/c5a59f70b7f547ac8a1f16535f18745b_9366/Ba_Lo_Adicolor_nau_IS4360_05_hover_standard.jpg",
+                name: "Ba Lô Adicolo",
+                price: "850.000₫"
+            },
+            {
+                img: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/1d4e388116df491983c6af3b010b3db0_9366/Ba_Lo_Linear_Essentials_DJen_HT4746_05_hover_standard.jpg",
+                name: "Ba Lô Linear Essentials",
+                price: "650.000₫"
+            },
+            {
+                img: "https://mediaelly.sgp1.digitaloceanspaces.com/uploads/2017/11/29162649/balo-nu-cao-cap-da-elly-eb7-6-2.jpg",
+                name: "Ba lô nữ cao cấp da thật ELLY EB7",
+                price: "1.749.500₫"
+            },
+            {
+                img: "https://mediaelly.sgp1.digitaloceanspaces.com/uploads/2024/01/29153113/balo-nu-thoi-trang-elly-ebh50-8-1.jpg",
+                name: "Balo nữ thời trang ELLY EBH50",
+                price: "979.300₫"
+            },
+            {
+                img: "https://mediaelly.sgp1.digitaloceanspaces.com/uploads/2018/06/14150756/Ba-lo-nu-cao-cap-da-that-ELLY-EBH12-2-1.jpg",
+                name: "Balo nữ thời trang ELLY EBH12",
+                price: "1.049.300₫"
+            },
+            {
+                img: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/6e6c5d98ef2e47b7b7a5afc500ef5e5e_9366/Ba_Lo_Nap_Cuon_Premium_Essentials_DJen_IJ0766_05_hover_standard.jpg",
+                name: "Ba Lô Nắp Cuộn Premium Essentials",
+                price: "1.700.000₫"
+            },
+
+        ];
+
+        const grid = document.querySelector('.product-grid');
+
+        products.forEach(product => {
+            grid.innerHTML += `
+            <div class="product-item">
+                <img src="${product.img}" alt="${product.name}">
+                <p>${product.name}</p>
+                <p>${product.price}</p>
+                 <button class="buy-now">Buy Now</button>
+            </div>
+        `;
+        });
+
+        const priceSlider = document.getElementById('priceSlider');
+        const maxPrice = document.getElementById('maxPrice');
+
+        priceSlider.addEventListener('input', function () {
+            let value = Number(priceSlider.value).toLocaleString('vi-VN');
+            maxPrice.textContent = value;
+        });
+    </script>

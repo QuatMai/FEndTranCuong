@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <title>Fashion House Việt</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="Giay.css">
+    </head>
+
+<body>
+    <section class=" top-txt ">
+        <div class="head container ">
+            <div class="head-txt ">
+                <p>Free shipping, 30-day return or refund guarantee.</p>
+            </div>
+            <div class="sing_in_up ">
+                <a href="# ">SIGN IN</a>
+                <a href="# ">SIGN UP</a>
+            </div>
+        </div>
+    </section>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <input type="checkbox" name="" id="checkbox">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <a href="../TrangChu.html">Home</a>
+            </ul>
+            <div class="logo">
+                <img src="https://i.postimg.cc/TP6JjSTt/logo.webp" alt="">
+            </div>
+        </div>
+    </nav>
+    <section class="filter-section">
+        <div class="filter-container">
+            <h2>Bộ lọc</h2>
+            <div class="category">
+                <h3>Danh mục sản phẩm</h3>
+                <ul>
+                    <li>Sản phẩm mới</li>
+                    <li>Sale</li>
+                    <li>Giầy Nam</li>
+                    <li>Giầy Nữ</li>
+                    <li>Bộ sưu tập</li>
+                    <li>Hệ thống cửa hàng</li>
+                </ul>
+            </div>
+            <div class="price-range">
+                <h3>Khoảng giá</h3>
+                <input type="range" min="0" max="3000000" value="1500000" id="priceSlider">
+                <p><span id="minPrice">0</span>đ - <span id="maxPrice">3,000,000</span>đ</p>
+            </div>
+            <div class="size">
+                <h3>Size Giày Quốc Tế (EU)</h3>
+                <div class="size-options">
+                    <span>EU 36 = 22.5 cm</span>
+                    <span>EU 37 = 23 cm</span>
+                    <span>EU 38 = 24 cm</span>
+                    <span>EU 39 = 25 cm</span>
+                    <span>EU 40 = 26 cm</span>
+                    <span>EU 41 = 26.5 cm</span>
+                    <span>EU 42 = 27 cm</span>
+                    <span>EU 42 = 27 cm</span>
+                </div>
+            </div>
+            <div class="video-container">
+                <video controls>
+                    <source src="Giayyy.mp4" type="video/mp4">
+                    Trình duyệt của bạn không hỗ trợ video định dạng .mp4.
+                </video>
+            </div>
+        </div>
+
+        <div class="product-section">
+            <div class="product-grid">
+                <!-- Sản phẩm mẫu -->
+                <div class="product-item">
+                    <img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/f429dc9cd29b406fb4f59f8a2192523a_9366/giay-chay-bo-supernova-rise.jpg"
+                        alt="Pants 1">
+                    <p>Giày Chạy Bộ Supernova Rise (Hết Hàng)</p>
+                    <p>1.499.000đ</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <script>
+        const products = [
+            {
+                img: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/9e7b6911efb54be4a343af69013e8373_9366/Giay_Galaxy_6_trang_HP2419_01_standard.jpg",
+                name: "Giày Galaxy 6",
+                price: "1.260.000₫"
+            },
+            {
+                img: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/3b80dc652e404c6285f5165b67ccb42c_9366/Giay_Tennis_Barricade_13_DJen_IF0466_HM3_hover.jpg",
+                name: "Giày Tennis Barricade 13",
+                price: "1.450.000đ"
+            },
+            {
+                img: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/f54f03c827264fda9e50ae14010d6a13_9366/Giay_Racer_TR21_trang_GX4208_01_standard.jpg",
+                name: "Giày Racer TR21",
+                price: "1.499.000đ"
+            },
+            {
+                img: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/66ef8bd4315f4457a967af480092910f_9366/Giay_Duramo_SL_2.0_DJen_HP2376_01_standard.jpg",
+                name: "Giày Duramo SL 2.0",
+                price: "1.260.000₫"
+            },
+            {
+                img: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/ca2e5777522b4c708f0602d38c6b3cf6_9366/Giay_Samba_OG_trang_IF3813_01_standard.jpg",
+                name: "Giày Samba OG",
+                price: "1.890.000₫"
+            },
+            {
+                img: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/15215c3dffdd420a9a563d8fd68428ce_9366/Giay_Gazelle_mau_xanh_la_IG2092_01_standard.jpg",
+                name: "Giày Gazelle",
+                price: "2.125.000₫"
+            },
+            {
+                img: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/c72b4fe7eef14e9eb40eae6e0081171e_9366/Giay_Adizero_RC_4_Mau_xanh_da_troi_GZ0181_01_standard.jpg",
+                name: "Giày Adizero RC 4",
+                price: "1.995.000₫"
+            },
+            {
+                img: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/569a9430c1ff4122a8baaeab015d294a_9366/Giay_Adizero_RC_4_trang_GX8152_01_standard.jpg",
+                name: "Giày Adizero RF5",
+                price: "1.995.000₫"
+            },
+            {
+                img: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/d2f535a440594ed88eb9ae31001e8ccc_9366/Giay_Adizero_RC_4_DJen_GX6660_01_standard.jpg",
+                name: "Giày Adizero KC 6",
+                price: "1.995.000₫"
+            },
+            {
+                img: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/7cd134a35e994bbf8b7c358f43b05765_9366/Giay_NMD_G1_Mau_xanh_da_troi_ID9176_01_standard.jpg",
+                name: "Giày NMD_G1",
+                price: "2.730.000₫"
+            },
+            {
+                img: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/41ca7b33b9f94f3e8d7cad4e012f151c_9366/Giay_Duramo_SL_trang_H04625_01_standard.jpg",
+                name: "Giày Duramo SL",
+                price: "1.260.000₫"
+            },
+
+        ];
+
+        const grid = document.querySelector('.product-grid');
+
+        products.forEach(product => {
+            grid.innerHTML += `
+            <div class="product-item">
+                <img src="${product.img}" alt="${product.name}">
+                <p>${product.name}</p>
+                <p>${product.price}</p>
+                 <button class="buy-now">Buy Now</button>
+            </div>
+        `;
+        });
+
+        const priceSlider = document.getElementById('priceSlider');
+        const maxPrice = document.getElementById('maxPrice');
+
+        priceSlider.addEventListener('input', function () {
+            let value = Number(priceSlider.value).toLocaleString('vi-VN');
+            maxPrice.textContent = value;
+        });
+    </script>
