@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: red;
+    color: rgb(255, 255, 255);
 }
 
 body {
@@ -48,100 +48,6 @@ body {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.945);
     margin: 0 10px;
-}
-
-/* Nút Sign In / Sign Up */
-.sing_in_up a {
-    text-decoration: none;
-    padding: 12px 24px;
-    margin: 10px;
-    color: white;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.sing_in_up a:hover {
-    background-color: #45a049;
-}
-
-/* Popup Modal */
-.modal {
-    display: none;
-    /* Ẩn mặc định */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.6);
-    /* Mờ nền */
-}
-
-/* Nội dung modal */
-.modal-content {
-    background-color: #fff;
-    margin: 10% auto;
-    padding: 30px;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 450px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 0.4s;
-    /* Hiệu ứng mở popup */
-}
-
-/* Nút đóng (X) */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover {
-    color: #000;
-}
-
-/* Ô input của form */
-form input {
-    width: 100%;
-    padding: 12px;
-    margin: 12px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-/* Nút trong form */
-form button {
-    width: 100%;
-    padding: 12px;
-    margin-top: 20px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-}
-
-form button:hover {
-    background-color: #45a049;
-}
-
-/* Hiệu ứng mở popup */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
 }
 
 /* //........ Navbar ........// */

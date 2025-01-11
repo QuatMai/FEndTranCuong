@@ -1,45 +1,74 @@
 /* //........top text ........// */
-.product-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* Đảm bảo các phần tử được phân bố đều */
-    height: 400px;
-    /* Đặt chiều cao cố định cho sản phẩm */
-    border: 1px solid #ddd;
-    padding: 10px;
+/* CSS cơ bản */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: #333;
+    color: white;
     text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
+    padding: 15px 0;
 }
 
-.product-item img {
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #555;
+    padding: 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.card img {
     max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 
-.product-item p {
-    margin: 10px 0;
-    font-size: 16px;
-}
+/* Media Query cho điện thoại */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.buy-now {
-    padding: 12px 20px;
-    background-color: #f0f0f0;
-    color: #333;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
+    .content {
+        flex-direction: column;
+    }
 
-.buy-now:hover {
-    background-color: #d1d1d1;
-    transform: scale(1.05);
+    .card {
+        flex: 1 1 100%;
+    }
 }
 
 :root {
