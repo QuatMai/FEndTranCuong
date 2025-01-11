@@ -323,3 +323,16 @@ body {
     text-align: center;
     padding: 20px 0;
 }
+
+/* Media Query  */
+/* Hiệu ứng fade-in cho toàn bộ trang */
+body {
+    opacity: 0;
+    animation: fadeInPage 1s forwards;
+}
+
+@keyframes fadeInPage {
+    to {
+        opacity: 1;
+    }
+}

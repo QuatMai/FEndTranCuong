@@ -165,7 +165,7 @@ body {
 }
 
 .navbar-container {
-    background-color: #f1e66d36;
+    background-color: #00000042;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -413,7 +413,7 @@ body {
 }
 
 .filter-section {
-    background-color: #ffffff;
+    background-color: #00000014;
     display: flex;
     gap: 40px;
     padding: 40px;
@@ -625,18 +625,6 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
-    .product-grid {
-        grid-template-columns: 1fr 1fr;
-        /* Hiển thị 2 cột trên màn hình nhỏ */
-    }
-
-    .product-item {
-        flex: 1 1 100%;
-        /* Mỗi sản phẩm chiếm toàn bộ chiều rộng */
-        margin-bottom: 20px;
-    }
-}
 
 @media (max-width: 480px) {
     .product-grid {
@@ -655,26 +643,7 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
-    .buy-now {
-        font-size: 12px;
-        /* Giảm kích thước chữ trong nút */
-        padding: 8px 12px;
-        /* Điều chỉnh kích thước nút */
-    }
 
-    .product-item img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 10px;
-    }
-
-    .product-item p {
-        font-size: 14px;
-        /* Giảm kích thước chữ để hiển thị rõ ràng hơn */
-        margin: 8px 0;
-    }
-}
 
 @media (max-width: 768px) {
     footer {
@@ -717,7 +686,42 @@ footer {
     }
 
     .product-grid {
+        display: grid;
         grid-template-columns: 1fr;
-        /* Hiển thị 1 cột cho các sản phẩm */
+        /* Chỉ 1 cột cho các sản phẩm */
+        justify-items: center;
+        /* Căn giữa các sản phẩm */
+        gap: 20px;
+        /* Khoảng cách giữa các sản phẩm */
+    }
+
+    .product-item {
+        width: 100%;
+        /* Đảm bảo mỗi sản phẩm chiếm toàn bộ chiều rộng */
+        text-align: center;
+        /* Căn giữa các nội dung trong sản phẩm */
+        margin-bottom: 20px;
+    }
+
+    .product-item h2 {
+        font-size: 1.4rem;
+        /* Điều chỉnh kích thước tên sản phẩm */
+        margin-bottom: 10px;
+        text-align: center;
+        /* Căn giữa tên sản phẩm */
+    }
+
+    .product-item p {
+        font-size: 1rem;
+        text-align: center;
+        /* Căn giữa mô tả sản phẩm */
+        margin: 8px 0;
+    }
+
+    .product-item img {
+        width: 100%;
+        /* Hình ảnh chiếm 100% chiều rộng */
+        height: auto;
+        margin-bottom: 10px;
     }
 }

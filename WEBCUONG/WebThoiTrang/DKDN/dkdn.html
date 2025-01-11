@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký & Đăng nhập</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Form đăng ký -->
+        <div class="form-container sign-up-container">
+            <form id="registerForm">
+                <h1>Đăng ký</h1>
+                <input type="text" placeholder="Tên đăng nhập" id="registerUsername" required />
+                <input type="email" placeholder="Email" id="registerEmail" required />
+                <input type="password" placeholder="Mật khẩu" id="registerPassword" required />
+                <button type="submit">Đăng ký</button>
+                <!-- Nút quay lại -->
+                <button type="button" class="back-button" id="backToSignIn">Quay lại Đăng nhập</button>
+            </form>
+        </div>
+
+        <!-- Form đăng nhập -->
+        <div class="form-container sign-in-container">
+            <form id="loginForm">
+                <h1>Đăng nhập</h1>
+                <input type="text" placeholder="Tên đăng nhập" id="loginUsername" required />
+                <input type="password" placeholder="Mật khẩu" id="loginPassword" required />
+                <button type="submit">Đăng nhập</button>
+                <button type="button" onclick="location.href='../TrangChu.html'">Quay lại Trang Chủ</button>
+            </form>
+        </div>
+
+        <!-- Overlay -->
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Chào mừng trở lại!</h1>
+                    <p>Đăng nhập để tiếp tục trải nghiệm</p>
+                    <button class="ghost" id="signIn">Đăng nhập</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Xin chào!</h1>
+                    <p>Điền thông tin để đăng ký tài khoản</p>
+                    <button class="ghost" id="signUp">Đăng ký</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const signUpButton = document.getElementById("signUp");
+        const signInButton = document.getElementById("signIn");
+        const backToSignInButton = document.getElementById("backToSignIn");
+        const container = document.querySelector(".container");
+
+        const registerForm = document.getElementById("registerForm");
+        const loginForm = document.getElementById("loginForm");
+
+        let registeredUser = null; // Lưu thông tin người dùng đã đăng ký
+
+        // Chuyển sang form Đăng ký
+        signUpButton.addEventListener("click", () => {
+            container.classList.add("right-panel-active");
+        });
+
+        // Chuyển sang form Đăng nhập
+        signInButton.addEventListener("click", () => {
+            container.classList.remove("right-panel-active");
+        });
+
+        // Quay lại Đăng nhập từ form Đăng ký
+        backToSignInButton.addEventListener("click", () => {
+            container.classList.remove("right-panel-active");
+        });
+
+        // Xử lý đăng ký
+        registerForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const username = document.getElementById("registerUsername").value;
+            const email = document.getElementById("registerEmail").value;
+            const password = document.getElementById("registerPassword").value;
+
+            registeredUser = { username, email, password }; // Lưu thông tin người dùng đã đăng ký
+            alert("Đăng ký thành công! Hãy đăng nhập.");
+
+            // Chuyển qua form Đăng nhập
+            container.classList.remove("right-panel-active");
+        });
+
+        // Xử lý đăng nhập
+        loginForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const username = document.getElementById("loginUsername").value;
+            const password = document.getElementById("loginPassword").value;
+
+            // Kiểm tra thông tin đăng nhập
+            if (registeredUser && username === registeredUser.username && password === registeredUser.password) {
+                alert("Đăng nhập thành công!");
+                // Chuyển tới dashboard hoặc trang chính
+                window.location.href = '/WEBCUONG/WebThoiTrang/TrangChu.html';
+            } else {
+                alert("Sai tên đăng nhập hoặc mật khẩu!");
+            }
+        });
+    </script>
+</body>
+
+</html>
