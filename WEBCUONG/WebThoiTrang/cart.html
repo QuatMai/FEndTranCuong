@@ -33,17 +33,20 @@
             let total = 0;
 
             cart.forEach((product, index) => {
-                total += product.price;
+                // Chuyển giá từ chuỗi thành số, loại bỏ ký tự ₫ và dấu chấm
+                let productPrice = parseInt(product.price.replace(/₫|\.|,/g, ''), 10);
+                total += productPrice;
+
                 cartItems.innerHTML += `
-                    <li class="cart-item">
-                        <img src="${product.img}" alt="${product.name}">
-                        <div class="cart-info">
-                            <p>${product.name}</p>
-                            <p class="price">${product.price.toLocaleString('vi-VN')}₫</p>
-                        </div>
-                        <button class="remove-item" data-index="${index}">❌</button>
-                    </li>
-                `;
+            <li class="cart-item">
+                <img src="${product.img}" alt="${product.name}">
+                <div class="cart-info">
+                    <p>${product.name}</p>
+                    <p class="price">${product.price}</p>
+                </div>
+                <button class="remove-item" data-index="${index}">❌</button>
+            </li>
+        `;
             });
 
             totalPrice.textContent = total.toLocaleString('vi-VN') + "₫";
